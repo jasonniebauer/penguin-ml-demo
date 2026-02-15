@@ -27,10 +27,9 @@ def render_sidebar():
 # Display sidebar
 render_sidebar()
 
-with st.container(border=True):
-    st.markdown('##### Input Features')
-
-    with st.spinner():
+with st.spinner():
+    with st.container(border=True):
+        st.markdown('##### Input Features')
 
         col1, col2 = st.columns(2)
 
