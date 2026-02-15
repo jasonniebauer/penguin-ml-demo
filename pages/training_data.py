@@ -9,6 +9,9 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 
+# Display sidebar
+render_sidebar()
+
 st.subheader("Training Data")
 
 with st.spinner():
@@ -87,6 +90,3 @@ with st.spinner():
         feature_importances = pd.Series(
             clf.feature_importances_, index=X_encoded.columns)
         st.bar_chart(feature_importances.sort_values(ascending=False))
-
-# Display sidebar
-render_sidebar()

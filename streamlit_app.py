@@ -24,6 +24,9 @@ def render_sidebar():
             icon=':material/database:',
         )
 
+# Display sidebar
+render_sidebar()
+
 with st.container(border=True):
     st.markdown('##### Input Features')
 
@@ -113,6 +116,3 @@ with st.container(border=True):
             hide_index=True,
             width=704,
         )
-
-# Display sidebar
-render_sidebar()
