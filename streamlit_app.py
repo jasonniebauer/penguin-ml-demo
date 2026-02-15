@@ -90,28 +90,28 @@ with st.spinner():
         prediction_probability = predict_probability(input_encoded_df)
         prediction_probability = [n * 100 for n in prediction_probability]
 
-        # Display prediction result
-        st.write('##### 🐧Species prediction results')
-        penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
-        st.success(str(penguins_species[prediction][0]))
+    # Display prediction result
+    st.write('##### 🐧Species prediction results')
+    penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+    st.success(str(penguins_species[prediction][0]))
 
-        # Display prediction probability
-        df_prediction_proba = pd.DataFrame(prediction_probability)
-        df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
-        df_prediction_proba.rename(columns={0: 'Adelie', 1: 'Chinstrap', 2: 'Gentoo'})
-        st.dataframe(
-            df_prediction_proba,
-            column_config={
-                'Adelie': st.column_config.ProgressColumn(
-                    'Adelie', format="%d %%", min_value=0, max_value=100
-                ),
-                'Chinstrap': st.column_config.ProgressColumn(
-                    'Chinstrap', format="%d %%", min_value=0, max_value=100
-                ),
-                'Gentoo': st.column_config.ProgressColumn(
-                    'Gentoo', format="%d %%", min_value=0, max_value=100
-                ),
-            },
-            hide_index=True,
-            width=704,
-        )
+    # Display prediction probability
+    df_prediction_proba = pd.DataFrame(prediction_probability)
+    df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
+    df_prediction_proba.rename(columns={0: 'Adelie', 1: 'Chinstrap', 2: 'Gentoo'})
+    st.dataframe(
+        df_prediction_proba,
+        column_config={
+            'Adelie': st.column_config.ProgressColumn(
+                'Adelie', format="%d %%", min_value=0, max_value=100
+            ),
+            'Chinstrap': st.column_config.ProgressColumn(
+                'Chinstrap', format="%d %%", min_value=0, max_value=100
+            ),
+            'Gentoo': st.column_config.ProgressColumn(
+                'Gentoo', format="%d %%", min_value=0, max_value=100
+            ),
+        },
+        hide_index=True,
+        width=704,
+    )
