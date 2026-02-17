@@ -1,7 +1,12 @@
+# User Interface
 import streamlit as st
+from sidebar import render_sidebar
+
+# Data Handling
 import numpy as np
 import pandas as pd
-from sidebar import render_sidebar
+
+# Machine Learning
 from prediction import predict, predict_probability
 
 

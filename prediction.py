@@ -1,4 +1,7 @@
+# User Interface
 import streamlit as st
+
+# Machine Learning Model Persistence
 import joblib
 
 
