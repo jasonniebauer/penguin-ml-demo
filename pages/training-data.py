@@ -14,6 +14,11 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 
+st.set_page_config(
+    page_title="Penguin Species Classification Demo",
+    page_icon=":penguin:",
+)
+
 # Display sidebar
 render_sidebar()
 
